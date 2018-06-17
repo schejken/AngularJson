@@ -1,0 +1,51 @@
+<div class="row">
+  <div class="col-xs-12">
+      <div class="row">
+        <!-- <div class="col-sm-5 form-group">
+          <label for="ID">ID</label>
+          <input 
+            type="number" 
+            id="id" 
+            class="form-control"
+            #idInput>
+        </div> -->
+        <div class="col-sm-2 form-group">
+          <label for="first_name">First Name</label>
+          <input 
+            type="text" 
+            id="first_name" 
+            class="form-control"
+            #firstNameInput>
+        </div>
+        <div class="col-sm-2 form-group">
+          <label for="last_name">Last Name</label>
+          <input 
+            type="text" 
+            id="last_name" 
+            class="form-control"
+            #lastNameInput>
+        </div>
+        <div class="col-sm-2 form-group">
+          <label for="email">Email</label>
+          <input 
+            type="text" 
+            id="email" 
+            class="form-control"
+            #emailInput>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <button class="btn btn-success" (click)="onAddEmployee()">Add</button>
+          <span class="oi oi-plus m-2"></span>
+        </div>
+      </div>
+  </div>
+</div>
+<ul>
+  <li *ngFor="let emp of employees">
+    <div>First Name: {{emp.first_name}}</div>
+    <div>Last Name: {{emp.last_name}}</div>
+    <div>Email: {{emp.email}}</div>
+  </li>
+</ul>
