@@ -5,10 +5,13 @@ import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found.component';
 import { AppComponent } from './app.component';
 import { GetJsonComponent } from './get-json/get-json.component';
+import { LoginComponent } from './login/login.component';
+import { AuthGuardService } from './auth-guard.service';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'get-json', component : GetJsonComponent },
+  { path: 'get-json', component : GetJsonComponent, canActivate: [AuthGuardService] },
+  { path: 'login', component : LoginComponent },
   { path: '**', component: NotFoundComponent }
 ];
 

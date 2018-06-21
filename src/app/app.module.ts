@@ -7,13 +7,15 @@ import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { GetJsonComponent } from './get-json/get-json.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NotFoundComponent,
-    GetJsonComponent
+    GetJsonComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
