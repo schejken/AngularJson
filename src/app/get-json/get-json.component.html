@@ -43,7 +43,7 @@
   </div>
 </div>
 <ul>
-  <li *ngFor="let emp of employees">
+  <li *ngFor="let emp of employees | orderBy:order:ascending">
     <div>First Name: {{emp.first_name}}</div>
     <div>Last Name: {{emp.last_name}}</div>
     <div>Email: {{emp.email}}</div>

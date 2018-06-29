@@ -2,7 +2,7 @@
 var faker = require('faker')
 function generateEmployees () {
   var employees = []
-  for (var id = 0; id < 50; id++) {
+  for (var id = 0; id < 20; id++) {
     var firstName = faker.name.firstName()
     var lastName = faker.name.lastName()
     var email = faker.internet.email()

@@ -9,7 +9,23 @@
     <span class="oi oi-chevron-right"></span>
   </div>
   <div class="row">
-    <a routerLink="/get-json" routerLinkActive="active">Get Json</a>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" routerLink="" routerLinkActive="active">Home</a>
+          </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" routerLink="get-json" routerLinkActive="active">Get Json</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" routerLink="site2" routerLinkActive="active">Site 2</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" routerLink="karma" routerLinkActive="active">Karma</a>
+        </li>
+    </ul>
+    <button class="btn btn-danger ml-auto" (click)="logout()">Logout</button>
   </div>
-  <router-outlet></router-outlet>
+  <div class="row mt-4">
+      <router-outlet></router-outlet>
+  </div>
 </div>

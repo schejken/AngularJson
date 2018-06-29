@@ -1,15 +1,8 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
-import { HttpErrorResponse, HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Employee, IEmployee } from '../interfaces';
 import { DataService } from '../data.service';
-
-const httpOptions = {
-  headers: new HttpHeaders({
-    'Content-Type': 'application/json',
-    'Authorization': 'my-auth-token'
-  })
-};
 
 @Component({
   selector: 'app-get-json',
@@ -24,8 +17,11 @@ export class GetJsonComponent implements OnInit {
 
  employees: IEmployee[];
 
+ // Pipe properties
+ order: 'id';
+ ascending = false;
+
  constructor(
-   private http: HttpClient,
    private dataService: DataService) {
      this.showEmployees();
  }

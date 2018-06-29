@@ -8,6 +8,9 @@ import { NotFoundComponent } from './not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { GetJsonComponent } from './get-json/get-json.component';
 import { LoginComponent } from './login/login.component';
+import { Site2Component } from './site2/site2.component';
+import { KarmaTestComponent } from './karma-test/karma-test.component';
+import { OrderByPipe } from './order-by.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { LoginComponent } from './login/login.component';
     HomeComponent,
     NotFoundComponent,
     GetJsonComponent,
-    LoginComponent
+    LoginComponent,
+    Site2Component,
+    KarmaTestComponent,
+    OrderByPipe
   ],
   imports: [
     BrowserModule,

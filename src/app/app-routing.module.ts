@@ -7,10 +7,14 @@ import { AppComponent } from './app.component';
 import { GetJsonComponent } from './get-json/get-json.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuardService } from './auth-guard.service';
+import { Site2Component } from './site2/site2.component';
+import { KarmaTestComponent } from './karma-test/karma-test.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'get-json', component : GetJsonComponent, canActivate: [AuthGuardService] },
+  { path: 'site2', component : Site2Component },
+  { path: 'karma', component : KarmaTestComponent },
   { path: 'login', component : LoginComponent },
   { path: '**', component: NotFoundComponent }
 ];
@@ -20,7 +24,8 @@ const appRoutes: Routes = [
     CommonModule,
     RouterModule.forRoot(
       appRoutes,
-        { enableTracing: true } // <-- debugging purpose only
+        // { enableTracing: true } // <-- debugging purpose only
+        // { useHash: true } <-- Hash navigation strategie
     )
   ],
   exports: [
